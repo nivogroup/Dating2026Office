@@ -18,3 +18,11 @@ export type Photo = {
   memberId: string
 }
 
+// Has been created for the Edit a member profile
+export type EditableMember = {
+  displayName: string;
+  description?: string;
+  city: string;
+  country: string;
+}
+
