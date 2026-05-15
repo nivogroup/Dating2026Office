@@ -23,6 +23,8 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 // For Image upload
 builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+// For User Activity - to update the last active property
+builder.Services.AddScoped<LogUserActivity>();
 // For Image upload
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
